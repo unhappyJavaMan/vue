@@ -9,14 +9,14 @@ const router = createRouter({
       component: () => import('../views/HomeView.vue'),
       children: [
         {
-          path: 'option1',
-          name: 'option1',
-          component: () => import('../components/Option1View.vue')
+          path: 'Calendar',
+          name: 'Calendar',
+          component: () => import('../components/Calendar.vue')
         },
         {
-          path: 'option2',
-          name: 'option2',
-          component: () => import('../components/Option2View.vue')
+          path: 'Customer',
+          name: 'Customer',
+          component: () => import('../components/Customer.vue')
         }
       ]
     },
