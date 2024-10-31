@@ -29,7 +29,7 @@
             <span>會員</span>
           </router-link>
         </a-menu-item>
-        <a-sub-menu key="sub1">
+        <!-- <a-sub-menu key="sub1">
           <template #title>
             <span>
               <user-outlined />
@@ -53,7 +53,7 @@
         <a-menu-item key="9">
           <file-outlined />
           <span>File</span>
-        </a-menu-item>
+        </a-menu-item> -->
       </a-menu>
     </a-layout-sider>
     <a-layout>
@@ -215,11 +215,11 @@ onMounted(() => {
   object-fit: cover;
 } */
 
-.site-layout .site-layout-background {
+/* .site-layout .site-layout-background {
   background: #fff;
 }
 
 [data-theme="dark"] .site-layout .site-layout-background {
   background: #141414;
-}
+} */
 </style>
