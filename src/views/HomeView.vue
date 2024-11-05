@@ -168,9 +168,9 @@ const getInfo = async () => {
 };
 
 onMounted(() => {
-  // if(localStorage.getItem('userId') === null){
+
   getInfo();
-  // }
+
 });
 </script>
 <style scoped>
