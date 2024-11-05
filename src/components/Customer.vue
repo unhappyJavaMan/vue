@@ -123,19 +123,15 @@
 <script>
 import { onMounted, getCurrentInstance, ref, reactive } from "vue";
 import { message } from "ant-design-vue";
+import {SmileOutlined, DownOutlined} from '@ant-design/icons-vue'; // 导入 smile-outlined 组件
+
 
 export default {
+  components: {
+    SmileOutlined,
+    DownOutlined,
+  },
   setup() {
-    const rules = {
-      name: [{ required: true, message: "請輸入姓名", trigger: "blur" }],
-      email: [
-        { required: true, message: "請輸入Email!", trigger: "blur" },
-        { type: "email", message: "Email格式不正確", trigger: "blur" },
-      ],
-      phone: [{ required: true, message: "請輸入電話", trigger: "blur" }],
-      birthDate: [{ required: true, message: "請選擇生日", trigger: "change" }],
-      gender: [{ required: true, message: "請選擇性別", trigger: "change" }],
-    };
     const columns = [
       {
         title: "姓名",

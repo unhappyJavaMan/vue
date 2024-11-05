@@ -29,6 +29,12 @@
             <span>會員</span>
           </router-link>
         </a-menu-item>
+        <a-menu-item key="3">
+          <router-link to="/Service">
+            <AppstoreOutlined />
+            <span>服務項目</span>
+          </router-link>
+        </a-menu-item>
         <!-- <a-sub-menu key="sub1">
           <template #title>
             <span>
@@ -112,13 +118,14 @@ import { ref, getCurrentInstance } from "vue";
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 import { message } from "ant-design-vue";
-import { CalendarOutlined, TeamOutlined, UserOutlined, SettingOutlined, LogoutOutlined } from '@ant-design/icons-vue';
+import { CalendarOutlined, TeamOutlined, UserOutlined, SettingOutlined, LogoutOutlined, AppstoreOutlined} from '@ant-design/icons-vue';
 
 const { proxy } = getCurrentInstance();
 const router = useRouter();
 const collapsed = ref(true);
 const username = ref("");
 const selectedKeys = ref(["1"]);
+const avatarUrl = ref('');
 proxy.$axios.defaults.headers.common[
   "Authorization"
 ] = `Bearer ${localStorage.getItem("token")}`;
